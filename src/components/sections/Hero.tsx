@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Button from '@/components/ui/Button'
 import Container from '@/components/ui/Container'
 import Image from 'next/image'
 import React from 'react'
@@ -46,12 +45,18 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" asChild>
-              <Link href="#contact">Reserve a Table</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
-              <Link href="#menu">View Our Menu</Link>
-            </Button>
+            <Link
+              href="#contact"
+              className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white bg-primary-600 rounded-lg hover:bg-primary-700 transition-colors"
+            >
+              Reserve a Table
+            </Link>
+            <Link
+              href="#menu"
+              className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white border-2 border-white rounded-lg hover:bg-white/10 transition-colors"
+            >
+              View Our Menu
+            </Link>
           </div>
 
           {/* Stats */}
